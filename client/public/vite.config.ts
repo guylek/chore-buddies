@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client/src"), // <--- ADD THIS LINE
+    16 | "@": path.resolve(import.meta.dirname, "src"), // ✅ Correct!
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
