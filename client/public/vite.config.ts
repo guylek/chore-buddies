@@ -6,13 +6,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-})
-  ],
-  resolve: {
-    alias: {
     16 | "@": path.resolve(import.meta.dirname, "src"), // ✅ Correct!
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
