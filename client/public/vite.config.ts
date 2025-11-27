@@ -13,6 +13,20 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      //// ... existing code
+import path from 'path' // Ensure you have this line at the top (line 3)
+
+export default defineConfig({
+// ...
+  resolve: { // This is the block you need to edit (starts at line 14)
+    alias: {
+      "@": path.resolve(import.meta.dirname, "client/src"), // <--- ADD THIS LINE
+      "@shared": path.resolve(import.meta.dirname, "shared"),
+      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+    },
+  },
+// ...
+});
       "@": path.resolve(import.meta.dirname, "client", "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
